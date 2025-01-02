@@ -169,3 +169,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Training logs and checkpoints
+events.out.*
+*.pth
+*.pt
+*.out
+*.err
