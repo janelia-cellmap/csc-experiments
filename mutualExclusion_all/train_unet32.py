@@ -24,7 +24,8 @@ iterations_per_epoch = 1000  # number of iterations per epoch
 # Defining model (comment out all that are not used)
 # 3D UNet
 model_to_load = model_name = (
-    f"{__file__.split('/')[-1].split('_')[-1].removesuffix('.py')}_all.{random_seed}"  # name of the model for saving
+    __file__.split("/")[-1].split("_")[-1].removesuffix(".py")
+    + f"_all.{random_seed}"  # name of the model for saving
 )
 load_model = "best"  # load the latest model or the best validation model
 
