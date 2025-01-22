@@ -176,3 +176,4 @@ events.out.*
 *.pt
 *.out
 *.err
+*.csv

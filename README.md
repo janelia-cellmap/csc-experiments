@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/janelia-cellmap/dacapo/main/docs/source/_static/CellMapLogo.png" alt="CellMap logo" width="85%">
+
 # **CellMap Segmentation Challenge Experiments**
 ### This repository contains the code for the experiments conducted by the CellMap Project Team in order to establish baseline performance metrics for the [CellMap Segmentation Challenge](https://cellmapchallenge.janelia.org). This uses the [challenge repository](https://github.com/janelia-cellmap/cellmap-segmentation-challenge) heavily. In general the code is organized as follows:
 ```
@@ -23,6 +25,8 @@ README.md
 LICENSE
 .gitignore
 ```
+
+For convenience, a template folder for new experiments is provided in the `template/` directory.
 
 You will notice that the experiments contained within these directories use more advanced configurations than those covered in the tutorial examples, as well as making use of other tools/repos such as `cellmap-models`. In general, the `model.py` file contains the model architecture and any checkpoint loading, `data.py` contains configuration of training/validation data splitting/augmentations/transforms/etc., the `train_config.py` file contains the overall training configuration (including settings imported from `model.py` and `data.py`), and the `process_config.py` file contains the prediciton post-processing configuration. The `datasplit.csv` file contains the exact data split used for training and validation, most often generated using a probabilistic split via `cellmap_segmentation_challenge.utils.make_datasplit_csv`. The `logs/` directory contains the training logs as well as any system logs (such as those produced when running jobs on a HPC cluster), and the `checkpoints/` directory contains the model checkpoints. The `__init__.py` file is used to make the experiment directory a Python package. A `README.md` file is also included in each experiment directory to provide additional information about the experiment, including summary results and the team members involved in designing and running it. Logs and checkpoints are not included in this repository, but can be provided upon request (the folder structure is provided to allow for easy replication of the experiments). This general structure is designed to allow for easy and rapid iteration of experiments, as well as to provide a clear and consistent way to organize the code and results.
 

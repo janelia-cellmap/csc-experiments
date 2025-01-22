@@ -1,1 +1,2 @@
 cellmap-models
+git+https://github.com/janelia-cellmap/LeibNetz.git
