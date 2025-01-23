@@ -1,5 +1,4 @@
 #!/bin/bash
-# rm logs/*
 
 # export CUDA_LAUNCH_BLOCKING=1 # for debugging
 export SEED=$2
