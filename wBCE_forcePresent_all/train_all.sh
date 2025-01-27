@@ -3,6 +3,9 @@
 rm logs/*
 seed=$1
 
+export SEED=$seed
+python make_datasplit.py
+
 for file in train_*.py; do
     # Extract train_<model>.py from file
     model=$(echo $file | cut -d'_' -f2 | cut -d'.' -f1)
