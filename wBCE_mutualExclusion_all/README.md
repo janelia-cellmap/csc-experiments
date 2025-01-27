@@ -1,4 +1,4 @@
-# Experiment: *\<experiment name>*
+# Experiment: *\wBCE_mutualExclusion_all*
 These models were trained using **true negative masking** (see main README for details) where possible to predict [all of the classes tested in the CellMap Segmentation Challenge](https://janelia-cellmap.github.io/cellmap-segmentation-challenge/annotation_classes.html#detailed-class-descriptions). These setups uses weighted Binary Cross Entropy loss with a RAdam optimizer that has decoupled weight decay. Data augmentation includes random rotations, transposes, mirroring, intensity shifts, and Gaussian noise. Validation time is limited to 1 minute per validation period, so variability in validation scores may be observed.
 
 # Model(s):
