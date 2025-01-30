@@ -50,7 +50,8 @@ Some of the experiments in this directory use a technique called "true negative 
 
 `cellmap_segmentation_challenge.utils` contains `get_class_relations` to return a dictionary of class relations. This is then passed as an argument during the creation of the `cellmap_data.CellMapDataSplit` object to enable true negative masking.
 
-#
+## LeibNetz
+The `LeibNetz` repository contains ...
 
 # Models:
 
@@ -79,6 +80,6 @@ The `setup_04` model was trained as part of the original COSEM Project team, whi
 
 # Experiments:
 
-## setup_04_all
+## wBCE_mutualExclusion_all
 This experiment uses the `setup_04` pretrained model from `cellmap-models` to predict binary masks for all class labels included in the CellMap Segmentation Challenge, using **true negative masking** (see above for details) where possible. This setup uses Binary Cross Entropy loss with a RAdam optimizer.
 

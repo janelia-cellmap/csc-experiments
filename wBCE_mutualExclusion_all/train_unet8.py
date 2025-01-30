@@ -2,16 +2,17 @@
 import leibnetz
 
 from upath import UPath
+from cellmap_segmentation_challenge.utils import load_safe_config
 
-from shared import (
-    random_seed,
-    classes,
-    use_mutual_exclusion,
-    force_all_classes,
-    spatial_transforms,
-    train_raw_transforms,
-    val_raw_transforms,
-)
+shared_config = load_safe_config(UPath(__file__).parent / "shared.py", force_safe=False)
+
+random_seed = shared_config.random_seed
+classes = shared_config.classes
+use_mutual_exclusion = shared_config.use_mutual_exclusion
+force_all_classes = shared_config.force_all_classes
+spatial_transforms = shared_config.spatial_transforms
+train_raw_transforms = shared_config.train_raw_transforms
+val_raw_transforms = shared_config.val_raw_transforms
 
 
 # %% Set hyperparameters and other configurations
